@@ -13,7 +13,6 @@ for i = 1:45
     end
 end
 u = unique(M);
-length(u);
 
 summa = 0;
 for i = 1:length(u)
@@ -76,3 +75,4 @@ parfor i = 1:n
 end
 
 end
+
