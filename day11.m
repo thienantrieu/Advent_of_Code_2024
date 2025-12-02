@@ -5,7 +5,6 @@ clc
 
 M = readmatrix('input_day11.txt');
 
-tic
 for i = 1:45
     N = parallelblink(M);
     M = vaihto(N);
@@ -14,7 +13,7 @@ for i = 1:45
     end
 end
 u = unique(M);
-length(u)
+length(u);
 
 summa = 0;
 for i = 1:length(u)
@@ -26,7 +25,7 @@ for i = 1:length(u)
     summa = summa + length(find(M==u(i)))*length(U);
 end
 fprintf('%d\n',summa)
-toc
+
 function[M] = vaihto(N)
 M = [];
 for i = 1:size(N,1)
@@ -75,4 +74,5 @@ parfor i = 1:n
     end
     N(i,:) = v
 end
+
 end
