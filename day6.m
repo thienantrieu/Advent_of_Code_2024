@@ -5,7 +5,9 @@ clc
 
 C = readcell('input_day6.xls');
 luku = 0;
-[luku,summa] = helvetti(C,luku)
+[luku,summa] = helvetti(C,luku);
+
+% Visualization
 visual_helvetti(C)
 
 %part 2
@@ -17,7 +19,9 @@ for i = 1:130
         [luku,summa] = helvetti(S,luku);
     end
 end
-luku
+
+fprintf('Answer for part 1: %d', summa)
+fprintf('Answer for part 2: %d', luku)
 
 function[luku, summa] = helvetti(C,luku)
 kulku = zeros([130 130]);
@@ -133,3 +137,4 @@ for i = y:-1:1
     end
 end
 end
+
