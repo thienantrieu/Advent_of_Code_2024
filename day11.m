@@ -3,6 +3,9 @@ clearvars
 close all
 clc
 
+% With parallel computing it took ~4 hours with my laptop on AMD Ryzen 5 5625U processor
+% Without parallel computing it took ~9 hours
+
 M = readmatrix('input_day11.txt');
 
 for i = 1:45
@@ -75,4 +78,5 @@ parfor i = 1:n
 end
 
 end
+
 
